@@ -124,6 +124,25 @@ public class SwitchFileOperation implements IGestureOperation{
 
     protected void moveVerticalUp() {
         Log.i(TAG, "moveVerticalUp");
+
+    }
+
+    protected void moveVerticalDown() {
+        Log.i(TAG, "moveVerticalDown:");
+
+    }
+
+    protected void moveHorizontalLeft() {
+        Log.i(TAG, "moveHorizontalLeft:");
+
+    }
+
+    protected void moveHorizontalRight() {
+        Log.i(TAG, "moveHorizontalRight:");
+
+    }
+
+    private void switchPreFile() {
         if(mContext == null) {
             return;
         }
@@ -140,8 +159,7 @@ public class SwitchFileOperation implements IGestureOperation{
         }
     }
 
-    protected void moveVerticalDown() {
-        Log.i(TAG, "moveVerticalDown:");
+    private void switchNextFile() {
         if(mContext == null) {
             return;
         }
@@ -158,8 +176,17 @@ public class SwitchFileOperation implements IGestureOperation{
         }
     }
 
-    protected void moveHorizontalLeft() {
-        Log.i(TAG, "moveHorizontalLeft:");
+    private void switchLoop() {
+        mLoop = !mLoop;
+        mMediaPlayer.setLooping(mLoop);
+        if(mLoop) {
+            Toast.makeText(mContext, R.string.tip_loop_change, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(mContext, R.string.tip_loop_change_no, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void switchWatermark() {
         if(mContext == null) {
             return;
         }
@@ -197,17 +224,6 @@ public class SwitchFileOperation implements IGestureOperation{
                     dis.heightPixels - bitmap.getHeight() - mContext.getResources()
                             .getDimensionPixelSize(R.dimen.mark_bottom));
             mShowSignature = true;
-        }
-    }
-
-    protected void moveHorizontalRight() {
-        Log.i(TAG, "moveHorizontalRight:");
-        mLoop = !mLoop;
-        mMediaPlayer.setLooping(mLoop);
-        if(mLoop) {
-            Toast.makeText(mContext, R.string.tip_loop_change, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(mContext, R.string.tip_loop_change_no, Toast.LENGTH_SHORT).show();
         }
     }
 }
