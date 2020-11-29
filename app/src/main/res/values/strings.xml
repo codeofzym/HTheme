@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Jin Huiliu Micro Motion</string>
-    <string name="des">Business simplicity, light luxury trend, elegant style, bright and dazzling, natural quiet enjoyment. \ n1. Three-finger slide down to switch multiple colors \ n2. Three-finger slide right to switch between single play and loop play \ n3. Three-finger slide left to control whether to display signature</string>
+    <string name="app_name">Storm effect</string>
+    <string name="des">Ambilight, supreme business, fortitude and restraint. Swipe left and right to switch between three colors of black gold, black red, and champagne gold. It provides two ways of continuous playback and sliding playback. Three-finger swipe right to switch colors, and three-finger left swipe to switch playback modes.</string>
     <string name="tip_speed_change">Playback speed is switched to %1$s times</string>
     <string name="tip_loop_change">Loop play</string>
     <string name="tip_loop_change_no">Intermittent play</string>

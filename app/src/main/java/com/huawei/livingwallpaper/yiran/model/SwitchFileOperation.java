@@ -10,12 +10,12 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
-import com.huawei.livingwallpaper.yiran.common.AssertUtils;
-import com.huawei.livingwallpaper.yiran.common.FileUtils;
-import com.huawei.livingwallpaper.yiran.common.PermissionActivity;
-import com.huawei.livingwallpaper.yiran.common.PermissionMgr;
-import com.huawei.livingwallpaper.yiran.common.R;
-import com.huawei.livingwallpaper.yiran.common.WLog;
+import com.huawei.livingwallpaper.yiran.baofengweidongxiao.AssertUtils;
+import com.huawei.livingwallpaper.yiran.baofengweidongxiao.FileUtils;
+import com.huawei.livingwallpaper.yiran.baofengweidongxiao.PermissionActivity;
+import com.huawei.livingwallpaper.yiran.baofengweidongxiao.PermissionMgr;
+import com.huawei.livingwallpaper.yiran.baofengweidongxiao.R;
+import com.huawei.livingwallpaper.yiran.baofengweidongxiao.WLog;
 import com.zym.mediaplayer.ZMediaPlayer;
 
 import java.io.File;
@@ -124,6 +124,25 @@ public class SwitchFileOperation implements IGestureOperation{
 
     protected void moveVerticalUp() {
         Log.i(TAG, "moveVerticalUp");
+
+    }
+
+    protected void moveVerticalDown() {
+        Log.i(TAG, "moveVerticalDown:");
+
+    }
+
+    protected void moveHorizontalLeft() {
+        Log.i(TAG, "moveHorizontalLeft:");
+        switchLoop();
+    }
+
+    protected void moveHorizontalRight() {
+        Log.i(TAG, "moveHorizontalRight:");
+        switchNextFile();
+    }
+
+    private void switchPreFile() {
         if(mContext == null) {
             return;
         }
@@ -140,8 +159,7 @@ public class SwitchFileOperation implements IGestureOperation{
         }
     }
 
-    protected void moveVerticalDown() {
-        Log.i(TAG, "moveVerticalDown:");
+    private void switchNextFile() {
         if(mContext == null) {
             return;
         }
@@ -158,8 +176,17 @@ public class SwitchFileOperation implements IGestureOperation{
         }
     }
 
-    protected void moveHorizontalLeft() {
-        Log.i(TAG, "moveHorizontalLeft:");
+    private void switchLoop() {
+        mLoop = !mLoop;
+        mMediaPlayer.setLooping(mLoop);
+        if(mLoop) {
+            Toast.makeText(mContext, R.string.tip_loop_change, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(mContext, R.string.tip_loop_change_no, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void switchWatermark() {
         if(mContext == null) {
             return;
         }
@@ -200,14 +227,4 @@ public class SwitchFileOperation implements IGestureOperation{
         }
     }
 
-    protected void moveHorizontalRight() {
-        Log.i(TAG, "moveHorizontalRight:");
-        mLoop = !mLoop;
-        mMediaPlayer.setLooping(mLoop);
-        if(mLoop) {
-            Toast.makeText(mContext, R.string.tip_loop_change, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(mContext, R.string.tip_loop_change_no, Toast.LENGTH_SHORT).show();
-        }
-    }
 }
