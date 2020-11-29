@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.huawei.livingwallpaper.yiran.common">
+    package="com.huawei.livingwallpaper.yiran.fengyazhuoyao">
 
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -16,19 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-      <activity android:name=".MainActivity">
+      <!-- activity android:name="com.huawei.livingwallpaper.yiran.fengyazhuoyao.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity -->
 
-        <activity android:name=".PermissionActivity"
+        <activity android:name="com.huawei.livingwallpaper.yiran.fengyazhuoyao.PermissionActivity"
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent"/>
 
-        <service android:name=".SimpleWallpaper"
+        <service android:name="com.huawei.livingwallpaper.yiran.fengyazhuoyao.SimpleWallpaper"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>

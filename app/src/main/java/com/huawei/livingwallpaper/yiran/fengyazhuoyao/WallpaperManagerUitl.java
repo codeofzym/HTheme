@@ -1,4 +1,4 @@
-package com.huawei.livingwallpaper.yiran.common;
+package com.huawei.livingwallpaper.yiran.fengyazhuoyao;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
