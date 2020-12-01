@@ -10,12 +10,12 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
-import com.huawei.livingwallpaper.yiran.common.AssertUtils;
-import com.huawei.livingwallpaper.yiran.common.FileUtils;
-import com.huawei.livingwallpaper.yiran.common.PermissionActivity;
-import com.huawei.livingwallpaper.yiran.common.PermissionMgr;
-import com.huawei.livingwallpaper.yiran.common.R;
-import com.huawei.livingwallpaper.yiran.common.WLog;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.AssertUtils;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.FileUtils;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.PermissionActivity;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.PermissionMgr;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.R;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.WLog;
 import com.zym.mediaplayer.ZMediaPlayer;
 
 import java.io.File;

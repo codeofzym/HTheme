@@ -11,9 +11,9 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 
-import com.huawei.livingwallpaper.yiran.common.PermissionActivity;
-import com.huawei.livingwallpaper.yiran.common.PermissionMgr;
-import com.huawei.livingwallpaper.yiran.common.WLog;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.PermissionActivity;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.PermissionMgr;
+import com.huawei.livingwallpaper.yiran.wuwangbuzhiweidongxiao.WLog;
 import com.zym.mediaplayer.ZMediaPlayer;
 
 import java.io.File;
