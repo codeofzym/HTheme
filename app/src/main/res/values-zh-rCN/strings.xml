@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">金辉琉翡微动效</string>
-    <string name="des">商务简约、轻奢潮流、绅雅风潮、璀璨炫彩，自然静享。\n1.三指下滑切换多种颜色\n2.三指右滑单次播放和循环播放切换\n3.三指左滑控制是否显示签名。</string>
+    <string name="app_name">大陆奇迹微动效</string>
+    <string name="des">沿袭经典风格设计，诠释生活美学，亦商务亦科技，精雕细琢，刚毅内敛，震撼美学与硬朗机械的结合。三指右滑调速，三指左滑播放模式切换，三指下滑切换颜色。</string>
     <string name="tip_speed_change">播放速度切换为%1$s倍</string>
     <string name="tip_loop_change">循环播放</string>
     <string name="tip_loop_change_no">间断播放</string>

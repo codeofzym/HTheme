@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.huawei.livingwallpaper.yiran.common"
+        applicationId "com.huawei.livingwallpaper.yiran.daluqiji"
         minSdkVersion 23
         targetSdkVersion 28
-        versionCode 1
-        versionName "V1.0.1"
+        versionCode 3
+        versionName "V1.0.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -1,4 +1,4 @@
-package com.huawei.livingwallpaper.yiran.common;
+package com.huawei.livingwallpaper.yiran.daluqiji;
 
 import android.app.Activity;
 import android.app.AlertDialog;

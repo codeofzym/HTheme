@@ -10,12 +10,12 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
-import com.huawei.livingwallpaper.yiran.common.AssertUtils;
-import com.huawei.livingwallpaper.yiran.common.FileUtils;
-import com.huawei.livingwallpaper.yiran.common.PermissionActivity;
-import com.huawei.livingwallpaper.yiran.common.PermissionMgr;
-import com.huawei.livingwallpaper.yiran.common.R;
-import com.huawei.livingwallpaper.yiran.common.WLog;
+import com.huawei.livingwallpaper.yiran.daluqiji.AssertUtils;
+import com.huawei.livingwallpaper.yiran.daluqiji.FileUtils;
+import com.huawei.livingwallpaper.yiran.daluqiji.PermissionActivity;
+import com.huawei.livingwallpaper.yiran.daluqiji.PermissionMgr;
+import com.huawei.livingwallpaper.yiran.daluqiji.R;
+import com.huawei.livingwallpaper.yiran.daluqiji.WLog;
 import com.zym.mediaplayer.ZMediaPlayer;
 
 import java.io.File;
@@ -36,6 +36,7 @@ public class SwitchFileOperation implements IGestureOperation{
 
     protected Context mContext;
     protected ZMediaPlayer mMediaPlayer;
+    private float mSpeed = 1.0f;
 
     public SwitchFileOperation(Context context, ZMediaPlayer player) {
         this.mContext = context;
@@ -124,22 +125,22 @@ public class SwitchFileOperation implements IGestureOperation{
 
     protected void moveVerticalUp() {
         Log.i(TAG, "moveVerticalUp");
-
+        switchNextFile();
     }
 
     protected void moveVerticalDown() {
         Log.i(TAG, "moveVerticalDown:");
-
+        switchPreFile();
     }
 
     protected void moveHorizontalLeft() {
         Log.i(TAG, "moveHorizontalLeft:");
-
+        switchLoop();
     }
 
     protected void moveHorizontalRight() {
         Log.i(TAG, "moveHorizontalRight:");
-
+        switchSpeed();
     }
 
     private void switchPreFile() {
@@ -225,5 +226,18 @@ public class SwitchFileOperation implements IGestureOperation{
                             .getDimensionPixelSize(R.dimen.mark_bottom));
             mShowSignature = true;
         }
+    }
+
+    private void switchSpeed() {
+        if (mMediaPlayer == null) {
+            return;
+        }
+        mSpeed += 0.2f;
+        if (mSpeed > 1.2f) {
+            mSpeed = 0.8f;
+        }
+        mMediaPlayer.setPlaybackSpeed(mSpeed);
+        Toast.makeText(mContext, String.format(mContext.getString(R.string.tip_speed_change), String.valueOf(mSpeed)),
+                Toast.LENGTH_LONG).show();
     }
 }
