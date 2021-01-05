@@ -36,6 +36,7 @@ public class SwitchFileOperation implements IGestureOperation{
 
     protected Context mContext;
     protected ZMediaPlayer mMediaPlayer;
+    private float mSpeed = 1.0f;
 
     public SwitchFileOperation(Context context, ZMediaPlayer player) {
         this.mContext = context;
@@ -225,5 +226,18 @@ public class SwitchFileOperation implements IGestureOperation{
                             .getDimensionPixelSize(R.dimen.mark_bottom));
             mShowSignature = true;
         }
+    }
+
+    private void switchSpeed() {
+        if (mMediaPlayer == null) {
+            return;
+        }
+        mSpeed += 0.2f;
+        if (mSpeed > 1.2f) {
+            mSpeed = 0.8f;
+        }
+        mMediaPlayer.setPlaybackSpeed(mSpeed);
+        Toast.makeText(mContext, String.format(mContext.getString(R.string.tip_speed_change), String.valueOf(mSpeed)),
+                Toast.LENGTH_LONG).show();
     }
 }
