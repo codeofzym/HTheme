@@ -1,4 +1,4 @@
-package com.huawei.livingwallpaper.yiran.common;
+package com.huawei.livingwallpaper.yiran.zhizunliuguangbaoshilan;
 
 import android.app.Activity;
 import android.content.Intent;

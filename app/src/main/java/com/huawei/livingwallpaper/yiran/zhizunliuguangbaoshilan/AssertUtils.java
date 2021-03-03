@@ -1,4 +1,4 @@
-package com.huawei.livingwallpaper.yiran.common;
+package com.huawei.livingwallpaper.yiran.zhizunliuguangbaoshilan;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,7 +12,7 @@ public class AssertUtils {
 
     private static final String NAME = "wallpaper_name";
     private static final String COLOR_INDEX = "color_index";
-    private static final int MAX = 9;
+    private static final int MAX = 1;
 
     public static int getCureentPathIndex(Context context) {
         if(context == null) {

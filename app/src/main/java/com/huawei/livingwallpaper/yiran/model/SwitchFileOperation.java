@@ -10,12 +10,12 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
-import com.huawei.livingwallpaper.yiran.common.AssertUtils;
-import com.huawei.livingwallpaper.yiran.common.FileUtils;
-import com.huawei.livingwallpaper.yiran.common.PermissionActivity;
-import com.huawei.livingwallpaper.yiran.common.PermissionMgr;
-import com.huawei.livingwallpaper.yiran.common.R;
-import com.huawei.livingwallpaper.yiran.common.WLog;
+import com.huawei.livingwallpaper.yiran.zhizunliuguangbaoshilan.AssertUtils;
+import com.huawei.livingwallpaper.yiran.zhizunliuguangbaoshilan.FileUtils;
+import com.huawei.livingwallpaper.yiran.zhizunliuguangbaoshilan.PermissionActivity;
+import com.huawei.livingwallpaper.yiran.zhizunliuguangbaoshilan.PermissionMgr;
+import com.huawei.livingwallpaper.yiran.zhizunliuguangbaoshilan.R;
+import com.huawei.livingwallpaper.yiran.zhizunliuguangbaoshilan.WLog;
 import com.zym.mediaplayer.ZMediaPlayer;
 
 import java.io.File;
@@ -26,7 +26,7 @@ public class SwitchFileOperation implements IGestureOperation{
     private static final String TAG = "SwitchFileOperation";
     private static final String FILE_NAME = "zt5.png";
     private static final int POINT_NUM_3 = 3;
-    private static final boolean OPTION3_OPEN = true;
+    private static final boolean OPTION3_OPEN = false;
 
     protected float mPoint3DownX = 0;
     protected float mPoint3DownY = 0;
