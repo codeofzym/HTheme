@@ -10,12 +10,12 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
-import com.huawei.livingwallpaper.yiran.common.AssertUtils;
-import com.huawei.livingwallpaper.yiran.common.FileUtils;
-import com.huawei.livingwallpaper.yiran.common.PermissionActivity;
-import com.huawei.livingwallpaper.yiran.common.PermissionMgr;
-import com.huawei.livingwallpaper.yiran.common.R;
-import com.huawei.livingwallpaper.yiran.common.WLog;
+import com.huawei.livingwallpaper.yiran.chuanqituofeilunshangwu.AssertUtils;
+import com.huawei.livingwallpaper.yiran.chuanqituofeilunshangwu.FileUtils;
+import com.huawei.livingwallpaper.yiran.chuanqituofeilunshangwu.PermissionActivity;
+import com.huawei.livingwallpaper.yiran.chuanqituofeilunshangwu.PermissionMgr;
+import com.huawei.livingwallpaper.yiran.chuanqituofeilunshangwu.R;
+import com.huawei.livingwallpaper.yiran.chuanqituofeilunshangwu.WLog;
 import com.zym.mediaplayer.ZMediaPlayer;
 
 import java.io.File;
@@ -24,7 +24,7 @@ import java.io.IOException;
 
 public class SwitchFileOperation implements IGestureOperation{
     private static final String TAG = "SwitchFileOperation";
-    private static final String FILE_NAME = "zt5.png";
+    private static final String FILE_NAME = "74bg.png";
     private static final int POINT_NUM_3 = 3;
     private static final boolean OPTION3_OPEN = true;
 
@@ -125,22 +125,23 @@ public class SwitchFileOperation implements IGestureOperation{
 
     protected void moveVerticalUp() {
         Log.i(TAG, "moveVerticalUp");
+        switchPreFile();
 
     }
 
     protected void moveVerticalDown() {
         Log.i(TAG, "moveVerticalDown:");
-
+        switchNextFile();
     }
 
     protected void moveHorizontalLeft() {
         Log.i(TAG, "moveHorizontalLeft:");
-
+        switchWatermark();
     }
 
     protected void moveHorizontalRight() {
         Log.i(TAG, "moveHorizontalRight:");
-
+        switchLoop();
     }
 
     private void switchPreFile() {

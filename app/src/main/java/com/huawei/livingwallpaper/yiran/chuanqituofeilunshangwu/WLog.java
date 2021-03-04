@@ -1,4 +1,4 @@
-package com.huawei.livingwallpaper.yiran.common;
+package com.huawei.livingwallpaper.yiran.chuanqituofeilunshangwu;
 
 import android.util.Log;
 

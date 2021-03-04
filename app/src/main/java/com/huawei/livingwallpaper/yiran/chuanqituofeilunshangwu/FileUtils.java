@@ -1,4 +1,4 @@
-package com.huawei.livingwallpaper.yiran.common;
+package com.huawei.livingwallpaper.yiran.chuanqituofeilunshangwu;
 
 import android.content.Context;
 import android.content.res.AssetManager;
